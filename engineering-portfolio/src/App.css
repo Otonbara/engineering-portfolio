@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-BBH: 'BBH Sans Hegarty', sans-serif;
+  --font-Nunito: 'Nunito', sans-serif;
+  --color-bg: #111827;
+  --color-surface: #1f2937;
+  --color-border: #374151;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #9ca3af;
+  --color-accent: #3b82f6;
+  --color-accent2: #60a5fa;
+  --color-highlight: #facc15;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-BBH);
+}
+
+body {
+  font-family: var(--font-Nunito);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 20ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: currentColor;
+  }
+}
+
+.animate-typing {
+  animation: typing 1.5s steps(21) 1s 1 normal both, blink 0.7s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #93c5fd;
+  display: inline-block;
+}
