@@ -58,6 +58,16 @@ body {
   display: inline-block;
 }
 
+/* Disable typing animation on mobile */
+@media (max-width: 768px) {
+  .animate-typing {
+    animation: none;
+    white-space: normal; /* allow wrapping */
+    border-right: none; /* remove blinking cursor */
+    display: block;
+  }
+}
+
 /* Morphing Gradient Background */
 @keyframes blob {
   0% {
@@ -81,7 +91,7 @@ body {
 }
 
 .animate-blob {
-  animation: blob 20s cubic-bezier(0.45, 0, 0.55, 1);
+  animation: blob 20s infinite ease-in-out;
 }
 
 /* Unique Durations */
