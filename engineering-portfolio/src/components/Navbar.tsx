@@ -12,23 +12,25 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-            <div
-                className="px-4 md:px-8 py-3 flex items-center justify-center gap-6 
-                backdrop-blur-md bg-surface/90 border border-white/20 rounded-full shadow-md shadow-surface
-                overflow-x-auto no-scrollbar">
-                <ul className="flex items-center gap-6 text-sm text-text-primary font-semibold whitespace-nowrap">
-                    {navLinks.map(({ name, href, icon: Icon }) => (
-                        <li key={name}>
-                            <a
-                                href={href}
-                                className="flex items-center gap-2 hover:text-accent transition-colors duration-200">
-                                {/* Show icons only on mobile */}
-                                <Icon className="md:hidden text-text-primary" size={20} strokeWidth={2} />
-                                <span className="hidden md:inline">{name}</span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+            <div className="relative">
+                <div className="absolute -inset-0.5 bg-linear-to-r from-accent via-purple-400 to-accent2 rounded-full blur opacity-75"/>
+                <div
+                    className="relative px-4 md:px-8 py-3 flex items-center justify-center gap-6 
+                    backdrop-blur-md bg-surface border border-white/30 rounded-full overflow-x-auto no-scrollbar">
+                    <ul className="flex items-center gap-6 text-sm text-text-primary font-semibold whitespace-nowrap">
+                        {navLinks.map(({ name, href, icon: Icon }) => (
+                            <li key={name}>
+                                <a
+                                    href={href}
+                                    className="flex items-center gap-2 hover:text-accent transition-colors duration-200">
+                                    {/* Show icons only on mobile */}
+                                    <Icon className="md:hidden text-text-primary" size={20} strokeWidth={2} />
+                                    <span className="hidden md:inline">{name}</span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </nav>
     );
