@@ -5,7 +5,7 @@ import CV from "../assets/ENGINEERING_RESUME.pdf"
 
 export default function Hero () {
     return (
-        <section id="hero" className="relative bg-bg py-32 px-6 lg:px-24">
+        <section className="relative bg-bg py-32 px-6 lg:px-24">
             <div className="relative flex flex-col-reverse lg:flex-row items-center justify-evenly gap-10 z-20">
                 {/* Text Section */}
                 <motion.div 
@@ -57,7 +57,7 @@ export default function Hero () {
                 className="relative flex flex-col md:flex-row gap-10 justify-center items-center mt-20 z-20"
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.9, delay: 0.9, ease: "easeOut" }}
+                transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Get In Touch */}
                 <div className="relative group">

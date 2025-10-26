@@ -2,7 +2,7 @@ import { Home, GraduationCap, Briefcase, FolderGit2, Wrench, Mail, } from "lucid
 
 export default function Navbar() {
     const navLinks = [
-        { name: "Home", href: "#hero", icon: Home },
+        { name: "Home", href: "#home", icon: Home },
         { name: "Education", href: "#education", icon: GraduationCap },
         { name: "Experience", href: "#experience", icon: Briefcase },
         { name: "Projects", href: "#projects", icon: FolderGit2 },

@@ -29,7 +29,7 @@ export default function ParallaxScroll() {
     }, []);
 
     return (
-        <main ref={containerRef} className="relative h-[200vh] bg-surface overflow-hidden md:overflow-visible">
+        <main ref={containerRef} className="relative h-[200vh] bg-black overflow-hidden md:overflow-visible">
             <Blobs />
             <div className="relative">
                 <HeroLayer scrollYProgress={scrollYProgress} />
@@ -42,10 +42,11 @@ export default function ParallaxScroll() {
 // Hero Layer
 function HeroLayer({ scrollYProgress }: {scrollYProgress: any }) {
     const scale = useTransform(scrollYProgress, [0, 1], [1, 0.65]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [0, -8]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, -3]);
 
     return (
         <motion.section
+            id="home" 
             style={{ scale, rotate }}
             className="sticky top-0 h-screen bg-bg">
                 <Hero />
@@ -55,7 +56,7 @@ function HeroLayer({ scrollYProgress }: {scrollYProgress: any }) {
 
 function AboutLayer({ scrollYProgress }: {scrollYProgress: any }) {
     const scale = useTransform(scrollYProgress, [0, 1], [0.65, 1]);
-    const rotate = useTransform(scrollYProgress, [0, 1], [8, 0]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [3, 0]);
 
     return (
         <motion.section
