@@ -1,43 +1,11 @@
-import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
-import { Mail, DownloadCloud } from "lucide-react";
+import { motion } from "motion/react"
+import { Mail, DownloadCloud, ChevronDown } from "lucide-react";
 import ProfileImage from "../assets/temp-profile-picture.png"
 import CV from "../assets/ENGINEERING_RESUME.pdf"
 
 export default function Hero () {
-    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-    useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            setMousePos({
-                x: e.clientX / window.innerWidth - 0.5,
-                y: e.clientY / window.innerHeight - 0.5,
-            })
-        }
-
-        window.addEventListener("mousemove", handleMouseMove)
-        return () => window.removeEventListener("mousemove", handleMouseMove)
-    }, [])
-    
     return (
-        <section id="hero" className="relative overflow-hidden bg-bg py-32 px-6 lg:px-24">
-            <div className="absolute inset-0 overflow-hidden">
-                <div 
-                    className="absolute w-96 h-96 bg-blue-500/30 rounded-full mix-blend-screen blur-3xl animate-blob duration-20s delay-0s"
-                    style={{
-                        transform: `translate(${mousePos.x * 50}px, ${mousePos.y * 50}px)`,
-                    }}/>
-                <div 
-                    className="absolute w-96 h-96 bg-purple-500/30 rounded-full mix-blend-screen blur-3xl animate-blob duration-25s delay-2s top-1/3 left-1/4"
-                    style={{
-                        transform: `translate(${mousePos.x * -40}px, ${mousePos.y * 60}px)`,
-                    }}/>
-                <div 
-                    className="absolute w-96 h-96 bg-pink-500/30 rounded-full mix-blend-screen blur-3xl animate-blob duration-30s delay-4s bottom-1/4 right-1/4"
-                    style={{
-                        transform: `translate(${mousePos.x * 60}px, ${mousePos.y * -40}px)`,
-                    }}/>
-            </div>
+        <section id="hero" className="relative bg-bg py-32 px-6 lg:px-24">
             <div className="relative flex flex-col-reverse lg:flex-row items-center justify-evenly gap-10 z-20">
                 {/* Text Section */}
                 <motion.div 
@@ -48,17 +16,18 @@ export default function Hero () {
                     viewport={{ once: false, amount: 0.3 }}>
                     <h1 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-accent
                         via-purple-400 to-accent2 bg-clip-text text-transparent
-                        inline-block overflow-hidden whitespace-nowrap pr-1
+                        inline-block overflow-hidden whitespace-nowrap
                         animate-typing text-center">
                         OTONBARA ALFRED OKOLAI
                     </h1>
                     <motion.h2 
-                        className="text-lg md:text-xl text-text-secondary text-center"
+                        className="text-lg md:text-xl text-text-secondary text-center lg:text-left"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                         viewport={{ once: false }}>
-                        CIVIL & ENVIRONMENTAL ENGINEER
+                        CIVIL & ENVIRONMENTAL ENGINEER 
+                        <br />(WATER RESOURCES)
                     </motion.h2>
                     <motion.h3 
                         className="text-sm md:text-base text-text-secondary"
@@ -85,10 +54,10 @@ export default function Hero () {
             </div>
             {/* CTA Buttons */}
             <motion.div 
-                className="relative flex flex-col md:flex-row gap-10 justify-center items-center mt-20 z-10"
+                className="relative flex flex-col md:flex-row gap-10 justify-center items-center mt-20 z-20"
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.9, delay: 0.5, ease: "easeOut" }}
+                transition={{ duration: 0.9, delay: 0.9, ease: "easeOut" }}
                 viewport={{ once: false }}>
                 {/* Get In Touch */}
                 <div className="relative group">
@@ -98,7 +67,7 @@ export default function Hero () {
                                     transition duration-1000 group-hover:duration-200 animate-tilt"/>
                     <a href="mailto:alfredokolai@gmail.com">
                         <button 
-                            className="relative px-6 py-3 bg-zinc-950 rounded-full leading-none flex items-center gap-2.5 
+                            className="relative px-4 md:px-6 py-2 md:py-3 bg-zinc-950 rounded-full leading-none flex items-center gap-2.5 
                                     text-text-secondary cursor-pointer group-hover:text-text-primary transition duration-200
                                     border border-white/30">
                             <span><Mail/></span>
@@ -116,7 +85,7 @@ export default function Hero () {
                         href={CV}
                         target="_blank">
                         <button 
-                            className="relative px-6 py-3 bg-surface rounded-full leading-none flex items-center gap-2.5 
+                            className="relative px-4 md:px-6 py-2 md:py-3 bg-surface rounded-full leading-none flex items-center gap-2.5 
                                     text-text-secondary cursor-pointer group-hover:text-text-primary transition duration-200
                                     border border-white/30">
                             <span><DownloadCloud/></span>
@@ -124,6 +93,20 @@ export default function Hero () {
                         </button>
                     </a>
                 </div>
+            </motion.div>
+            {/* Scroll Down */}
+            <motion.div
+                className="absolute left-1/2 transform -translate-x-1/2 py-5
+                            flex flex-col items-center text-text-secondary cursor-pointer z-10"
+                initial={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.8, delay: 1.5, ease: "easeOut" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                onClick={() => {
+                    const nextSection = document.querySelector("#about");
+                    nextSection?.scrollIntoView({ behavior: "smooth"});
+                }}>
+                <ChevronDown className="w-6 h-6 md:w-8 md:h-8 animate-bounce text-text-secondary"/>
             </motion.div>
         </section>
     )
