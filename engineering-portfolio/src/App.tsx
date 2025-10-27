@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar"
 import ParallaxScroll from "./components/ParallaxScroll"
 import Education from "./pages/Education"
+import Experience from "./pages/Experience"
 import "./App.css"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <ParallaxScroll />
       <Education />
+      <Experience />
     </>
   )
 }

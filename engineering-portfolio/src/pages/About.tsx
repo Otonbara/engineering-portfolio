@@ -24,7 +24,8 @@ export default function About() {
             <div className="relative flex flex-col md:flex-row justify-evenly gap-10 z-20">
                 <div className="md:w-1/2">
                     <motion.h2
-                        className="text-3xl md:text-4xl font-bold text-text-primary text-center md:text-left"
+                        className="text-3xl md:text-4xl font-bold bg-linear-to-r from-accent
+                        via-purple-400 to-accent2 bg-clip-text text-transparent text-center md:text-left"
                         style={{ x: titleX, opacity }}>
                         DRIVEN BY NECESSITY AND PRECISION
                     </motion.h2>
