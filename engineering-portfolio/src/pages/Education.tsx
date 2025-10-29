@@ -11,8 +11,13 @@ export default function Education() {
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     const educationData = [
+        // {
+        //     degree: "MSc in Water, Sanitation & Health Engineering",
+        //     school: "University of Leeds",
+        //     year: "Sept 2026 - Sept 2027",
+        // },
         {
-            degree: "Bachelor of Engineering in Civil & Environmental Engineering",
+            degree: "BEng in Civil & Environmental Engineering",
             school: "Bells University of Technology",
             year: "Feb 2021 - Feb 2025",
         }
@@ -69,7 +74,7 @@ export default function Education() {
                         {/* Card */}
                         <motion.div 
                             className="bg-surface/80 border border-border backdrop-blur-md p-6 w-full md:w-[45%] z-10">
-                            <h3 className="text-xl font-semibold text-text-primary mb-2">
+                            <h3 className="text-xl text-text-primary mb-2">
                                 {edu.degree}
                             </h3>
                             <p className="text-text-secondary text-sm italic mb-1">

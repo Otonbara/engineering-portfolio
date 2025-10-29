@@ -77,7 +77,7 @@ export default function Experience() {
                         className="relative flex flex-col md:flex-row md:items-center gap-6 pl-8 md:pl-12">
                         {/* Timeline Dot */}
                         <motion.div
-                            className="absolute left-0 md:left-0 top-8 w-5 h-5 rounded-full bg-accent border-[3px] border-surface shadow-lg z-20"
+                            className="absolute left-0 md:left-0 top-10 md:top-21 w-5 h-5 rounded-full bg-accent border-[3px] border-surface z-20"
                             initial={{ scale: 0, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             transition={{
@@ -88,13 +88,13 @@ export default function Experience() {
 
                         {/* Left Side: Company Info */}
                         <div className="flex flex-col items-start p-6 md:w-[45%]">
-                            <div className="flex items-center gap-4">
+                            <div className="flex flex-col md:flex-row items-center gap-4">
                                 <img
                                     src={exp.logo}
                                     alt={`${exp.company} logo`}
                                     className="w-14 h-14 object-fit rounded-lg"/>
-                                <div className="flex flex-col">
-                                    <h3 className="text-lg font-semibold text-text-primary">
+                                <div className="flex flex-col justify-center items-center md:items-start gap-1">
+                                    <h3 className="text-lg text-text-primary text-center">
                                         {exp.company}
                                     </h3>
                                     <p className="text-sm text-text-secondary">
