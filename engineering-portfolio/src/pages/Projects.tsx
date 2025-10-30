@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import FolderIcon from "../components/FolderIcon";
 import Project1 from "../assets/LEVERAGING_GIS_AND_SWMM.pdf";
@@ -8,6 +8,15 @@ export default function Projects() {
   const [openProject, setOpenProject] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.location.hash === "#project-gis-swmm") {
+      setOpenProject(0);
+      setTimeout(() => {
+        document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+      }, 200);
+    }
+  }, []);
 
   const projectData = [
     {
@@ -146,7 +155,10 @@ export default function Projects() {
                 </a>
 
                 <button
-                  onClick={() => setOpenProject(null)}
+                  onClick={() => {
+                    setOpenProject(null);
+                    history.replaceState(null, "", " ");
+                  }}
                   className="inline-block bg-red-500 px-6 py-2 rounded-xl font-medium hover:bg-red-500/80 transition-all shadow-lg hover:shadow-xl cursor-pointer"
                 >
                   ✕

@@ -5,7 +5,7 @@ import CV from "../assets/ENGINEERING_RESUME.pdf"
 
 export default function Hero () {
     return (
-        <section className="relative bg-bg py-32 px-6 lg:px-24">
+        <section id="home" className="relative bg-bg py-32 px-6 lg:px-24">
             <div className="relative flex flex-col-reverse lg:flex-row items-center justify-evenly gap-10 z-20">
                 {/* Text Section */}
                 <motion.div 
