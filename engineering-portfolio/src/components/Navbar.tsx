@@ -1,12 +1,13 @@
-import { Home, GraduationCap, Briefcase, FolderGit2, Wrench, Mail, } from "lucide-react";
+import { Home, GraduationCap, Briefcase, FolderGit2, Wrench, Mail, PaperclipIcon } from "lucide-react";
 
 export default function Navbar() {
     const navLinks = [
         { name: "Home", href: "#home", icon: Home },
         { name: "Education", href: "#education", icon: GraduationCap },
         { name: "Experience", href: "#experience", icon: Briefcase },
-        { name: "Projects", href: "#projects", icon: FolderGit2 },
         { name: "Skills", href: "#skills", icon: Wrench },
+        { name: "Projects", href: "#projects", icon: FolderGit2 },
+        { name: "Publications", href: "#publications", icon: PaperclipIcon },
         { name: "Contact", href: "#contact", icon: Mail },
     ];
 

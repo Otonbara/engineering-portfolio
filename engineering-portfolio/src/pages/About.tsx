@@ -27,20 +27,19 @@ export default function About() {
                         className="text-3xl md:text-4xl font-bold bg-linear-to-r from-accent
                         via-purple-400 to-accent2 bg-clip-text text-transparent text-center md:text-left"
                         style={{ x: titleX, opacity }}>
-                        DRIVEN BY NECESSITY AND PRECISION
+                        ENGINEERING PRATICAL SOLUTIONS FOR REAL WORLD INFRASTRUCTURE
                     </motion.h2>
                 </div>
                 <div className="md:w-1/2">
                     <motion.p
                         className="text-text-secondary text-base md:text-lg leading-relaxed text-justify"
                         style={{ x: textX, opacity }}>
-                        Necessity is what motivates me to work. 
-                        My commitment to ensuring sustainable water management safeguards social justice and 
-                        public safety stems from my own experience with the effects of flooding.
-                        My approach to any engineering problem is based on the idea that infrastructure needs to be accurate, 
-                        useful, and durable. In order to make sure that designs improve rather than degrade the environment, 
-                        I intend to integrate digital tools with field-tested rigor.
-                        My goal is to promote efficiency and innovation in my sector in the real world.
+                        I am a civil and environmental engineering graduate with a focus on water engineering,
+                        consulting, and sustainable infrastructure.
+                        Witnessing the impact of flooding within my state (Bayelsa, Nigeria) shaped my interest in
+                        urban drainage and flood management, highlighting how infrasturcture failures affect everyday life.
+                        I enjoy combining fieldwork, design and digital modeling to deliver practical, reliable solutions,
+                        and I aim to build a career in water engineering consultancy focused on resilient infrastructure.
                     </motion.p>
                 </div>
             </div>
