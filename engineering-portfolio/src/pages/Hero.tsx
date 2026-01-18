@@ -1,6 +1,6 @@
 import { motion } from "motion/react"
 import { Mail, DownloadCloud, ChevronDown } from "lucide-react";
-import ProfileImage from "../assets/temp-profile-picture.png"
+import ProfileImage from "../assets/profile-picture.png"
 import CV from "../assets/ENGINEERING_RESUME.pdf"
 
 export default function Hero () {
