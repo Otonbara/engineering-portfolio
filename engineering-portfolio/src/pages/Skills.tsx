@@ -8,6 +8,7 @@ import SWMM from "../assets/SWMM.png"
 import SketchUp from "../assets/SketchUp.svg"
 import Tekla from "../assets/Tekla.svg"
 import Excel from "../assets/Excel.svg"
+import Python from "../assets/Python.svg"
 
 export default function Skills() {
   const technicalSkills = [
@@ -40,6 +41,11 @@ export default function Skills() {
       name: "Microsoft Excel", 
       icon: Excel,
       tooltip: "Proficient in organizing, calculating, and analyzing project data, quantities, and budgets using complex formulas." 
+    },
+    { 
+      name: "Python", 
+      icon: Python,
+      tooltip: "Automating data workflows, scripting analysis, and building custom engineering tools with Python." 
     },
   ]
 

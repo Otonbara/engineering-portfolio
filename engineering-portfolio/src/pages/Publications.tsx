@@ -25,7 +25,7 @@ export default function Publications() {
               Analysis and Design of Sustainable Stormwater Management System in Ota, Ogun State, Nigeria
             </h3>
             <a
-              href="https://www.jree.ir/article_236631.html"
+              href="https://www.jree.ir/article_236631_81e6b52d6b918751088574ed0082f2ca.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="shrink-0 p-2 rounded-lg bg-accent/10 hover:bg-accent/20 transition-colors"
