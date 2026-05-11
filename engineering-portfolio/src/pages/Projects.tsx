@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import FloodMap from "../src/assets/Flood_Susceptibility_Report.pdf";
+import GIS from "../src/assets/LEVERAGING_GIS_AND_SWMM.pdf"
 
 interface Tag {
   label: string;
@@ -75,7 +77,7 @@ const projects: Project[] = [
       "Deployed as an interactive choropleth dashboard on Vercel with Nominatim location search and model diagnostics panel",
     ],
     liveUrl: "https://bayelsa-flood-dashboard.vercel.app/",
-    reportUrl: "/src/assets/Flood_Susceptibility_Report.pdf",
+    reportUrl: FloodMap,
   },
   {
     id: "lid-swmm",
@@ -112,7 +114,7 @@ const projects: Project[] = [
       "Permeable pavements (273 m² avg per unit) and rain barrels (202 m² roof coverage) modelled as distributed LID controls across all sub-catchments",
       "Peak outfall discharge reduced from 1.058 m³/s to 0.140 m³/s; final surface storage increased by over 40× under the LID scenario",
     ],
-    reportUrl: "/src/assets/LEVERAGING_GIS_AND_SWMM.pdf",
+    reportUrl: GIS,
   },
 ];
 
