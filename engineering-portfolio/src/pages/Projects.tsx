@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import FloodMap from "../src/assets/Flood_Susceptibility_Report.pdf";
-import GIS from "../src/assets/LEVERAGING_GIS_AND_SWMM.pdf"
+import FloodMap from "../assets/Flood_Susceptibility_Report.pdf";
+import GIS from "../assets/LEVERAGING_GIS_AND_SWMM.pdf"
 
 interface Tag {
   label: string;
