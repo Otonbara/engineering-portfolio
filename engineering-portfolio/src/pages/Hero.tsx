@@ -35,7 +35,7 @@ export default function Hero () {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.9 }}
                         viewport={{ once: false }}>
-                        BASED IN LAGOS, NIGERIA
+                        BASED IN ABUJA, NIGERIA
                     </motion.h3>
                 </motion.div>
                 {/* Image Section */}
